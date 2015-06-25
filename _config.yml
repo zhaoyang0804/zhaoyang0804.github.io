@@ -1,0 +1,12 @@
+# Site settings
+title: Zhao Yang Wrold
+email: zhaoyang0804@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  一个技术爱好者，码农一枚，研究的技术有J2EE、Android、iOS、Linux , 欢迎大家一期讨论。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://zhaoyang0804.github.com" # the base hostname & protocol for your site
+twitter_username: gnayohaz
+github_username:  zhaoyang0804
+
+# Build settings
+markdown: kramdown
