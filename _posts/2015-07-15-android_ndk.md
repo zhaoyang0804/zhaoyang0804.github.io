@@ -6,12 +6,12 @@ title: android NDK
 
 ### ANDROID NDK
 
-&emsp;&emsp;熟悉android的朋友都知道，android执行所有代码都是在虚拟机上完成的，如果想要执行一些比较低等的操作，在Linux系统上执行C/C++代码，需要通过Java调用JNI的方式来完成，下面我就来介绍一下Java调用C代码的过程。这篇文章讲分别介绍一下使用eclipse和android studio分别怎么使用。
+&emsp;&emsp;熟悉android的朋友都知道，android执行所有代码都是在虚拟机上完成的，如果想要执行一些比较底层的操作，在Linux系统上执行C/C++代码，需要通过Java调用JNI的方式来完成，下面我就来介绍一下Java调用C代码的过程。这篇文章讲介绍一下eclipse和android studio分别怎么使用。
 
 
 ### 调用过程
 
-&emsp;&emsp;不管采用哪种方式，原理都是一样的，只是过程略有不同，不用的IDE提供了不同的功能，方便大家使用，可能忽略了其中的某些过程，大家要明白只是IDE帮我们做了这些工作，但是具体的步骤大家一定要清楚，首先我先介绍一下原理。
+&emsp;&emsp;不管采用哪种方式，原理都是一样的，只是过程略有不同，不用的IDE提供了不同的功能，为了方便大家简化了其中某些过程，大家要明白只是IDE帮我们做了这些工作，具体的步骤大家一定要清楚，首先我先介绍一下所欲的步骤。
 
 	1.在Java中声明本地方法（native）。
 	2.通过JavaH命令编译class文件，生成C/C++的H类型的头文件。
@@ -22,7 +22,7 @@ title: android NDK
 	
 #### 首先搭建环境
 
-&emsp;&emsp;我的开发环境时Mac OS 相对来说要简单一些，使用windows环境的朋友需要安装Cygwin。这方面我就不介绍了，有需要的朋友自行Google。
+&emsp;&emsp;我的开发环境是Mac OS相对来说要简单一些，使用windows环境的朋友需要安装Cygwin。这方面我就不介绍了，有需要的朋友自行Google。
 
 1.下载NDK
 
@@ -50,7 +50,9 @@ title: android NDK
 
 3.配置环境变量
 
-&emsp;&emsp;默认情况下在Mac中配置当前用户的环境变量即可，在 ~/.bash_profile ，如果使用的是zsh 环境变量配置在 ~/.zshrc,在环境变量中增加。
+&emsp;&emsp;默认情况下在Mac中配置当前用户的环境变量即可，在 ~/.bash_profile文件中 ，如果使用的是zsh的方式，环境变量配置在 ~/.zshrc文件中。
+
+	在环境变量中增加：
 
 	NDK_HOME=/Users/zhaoyang/Developer/tools/android-ndk-r10e
 	export PATH=$NDK_HOME:$PATH
